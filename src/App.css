@@ -20,6 +20,7 @@
   --card-shadow: rgba(0, 0, 0, 0.3);
   --gradient-start: rgba(18, 18, 18, 0.7);
   --gradient-end: rgba(25, 25, 25, 0.5);
+  --border-color: #f0f0f0;
 }
 
 [data-theme='light'] {
@@ -27,10 +28,12 @@
   --bg-secondary: #e9ecef;
   --text-primary: #212529;
   --text-secondary: #495057;
+  --accent-color: #3f3c42;
   --card-bg: #ffffff;
   --card-shadow: rgba(0, 0, 0, 0.1);
   --gradient-start: #f8f9fa;
   --gradient-end: #e9ecef;
+  --border-color: #212529;
 }
 
 /* Grid Background */
@@ -88,9 +91,6 @@ body {
 
 .App {
   text-align: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
 }
 
 /* Hero Section */
