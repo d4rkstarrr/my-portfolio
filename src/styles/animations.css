@@ -1,0 +1,35 @@
+/* Animation styles for component transitions */
+
+/* Fade in from bottom animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Staggered children animation classes */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.stagger-children > *:nth-child(1) {
+  animation: fadeInUp 0.6s ease-out 0.1s forwards;
+}
+
+.stagger-children > *:nth-child(2) {
+  animation: fadeInUp 0.6s ease-out 0.3s forwards;
+}
+
+.stagger-children > *:nth-child(3) {
+  animation: fadeInUp 0.6s ease-out 0.5s forwards;
+}

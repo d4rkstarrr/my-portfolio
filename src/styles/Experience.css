@@ -7,7 +7,7 @@
 
 .timeline {
   position: relative;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 40px auto;
 }
 
@@ -71,6 +71,17 @@
   }
 }
 
+.timeline-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.timeline-title-section {
+  flex: 1;
+}
+
 .timeline-item h3 {
   margin-top: 0;
   color: var(--accent-color);
@@ -79,7 +90,43 @@
 .timeline-period {
   font-style: italic;
   color: var(--text-secondary);
-  margin-bottom: 15px;
+  margin-bottom: 5px;
+}
+
+.company-logo-container {
+  margin-left: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .timeline-item:nth-child(even) .timeline-header {
+    flex-direction: row-reverse;
+  }
+  
+  .timeline-item:nth-child(even) .company-logo-container {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+  min-width: 80px;
+}
+
+.company-logo {
+  max-width: 80px;
+  max-height: 50px;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .timeline-item:nth-child(even) .timeline-header {
+    flex-direction: row-reverse;
+  }
+  
+  .timeline-item:nth-child(even) .company-logo-container {
+    margin-left: 0;
+    margin-right: 15px;
+  }
 }
 
 .timeline-achievements {
@@ -89,4 +136,28 @@
 .timeline-achievements li {
   margin-bottom: 8px;
   line-height: 1.5;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.timeline-title-section {
+  flex: 1;
+}
+
+.company-logo-container {
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.company-logo {
+  max-width: 80px;
+  max-height: 50px;
+  object-fit: contain;
 }

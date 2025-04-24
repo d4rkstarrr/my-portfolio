@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Skills.css';
+import { skillsData } from '../data/portfolioData';
 
 function Skills() {
   return (
@@ -9,31 +10,25 @@ function Skills() {
         <div className="skill-category">
           <h3>Frontend</h3>
           <ul>
-            <li>React</li>
-            <li>JavaScript</li>
-            <li>HTML/CSS</li>
-            <li>TypeScript</li>
-            <li>Redux</li>
+            {skillsData.frontend.map((skill, index) => (
+              <li key={index}>{skill}</li>
+            ))}
           </ul>
         </div>
         <div className="skill-category">
           <h3>Backend</h3>
           <ul>
-            <li>Node.js</li>
-            <li>Python</li>
-            <li>SQL</li>
-            <li>Express</li>
-            <li>MongoDB</li>
+            {skillsData.backend.map((skill, index) => (
+              <li key={index}>{skill}</li>
+            ))}
           </ul>
         </div>
         <div className="skill-category">
           <h3>Tools & Others</h3>
           <ul>
-            <li>Git</li>
-            <li>Docker</li>
-            <li>AWS</li>
-            <li>CI/CD</li>
-            <li>Agile Methodologies</li>
+            {skillsData.tools.map((skill, index) => (
+              <li key={index}>{skill}</li>
+            ))}
           </ul>
         </div>
       </div>

@@ -5,11 +5,18 @@ const LoadingScreen = ({ onComplete }) => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const [isFading, setIsFading] = useState(false);
-  const greetings = ['👋Hello', '👋ನಮಸ್ಕಾರ', '👋नमस्ते', '👋こんにちは', '👋Hallo'];
+  const greetings = [
+    { text: '👋Hello', timeout: 500 },
+    { text: '👋ನಮಸ್ಕಾರ', timeout: 100 },
+    { text: '👋नमस्ते', timeout: 100 },
+    { text: '👋こんにちは', timeout: 100 },
+    { text: '👋Hallo', timeout: 100 }
+  ];
 
   useEffect(() => {
     // Text transition logic
     if (currentTextIndex < greetings.length) {
+      const currentGreeting = greetings[currentTextIndex];
       const textTimer = setTimeout(() => {
         setIsFading(true);
         
@@ -21,9 +28,9 @@ const LoadingScreen = ({ onComplete }) => {
               // Start the exit animation after the last greeting
               setTimeout(() => {
                 setIsVisible(false);
-                // Call onComplete after exit animation completes
-                // setTimeout(onComplete, 0);
-                onComplete();
+                // Call onComplete after exit animation completes with a delay
+                // to allow for the exit animation to finish before Hero animates in
+                setTimeout(onComplete, 100);
               }, 100); // Increased duration for final greeting display
               return nextIndex; // Update index to prevent re-render
             }
@@ -31,7 +38,7 @@ const LoadingScreen = ({ onComplete }) => {
           });
           setIsFading(false);
         }, 100); // Time for fade out (reduced)
-      }, 100); // Time each greeting stays visible (reduced)
+      }, currentGreeting.timeout); // Configurable timeout for each greeting
 
       return () => clearTimeout(textTimer);
     }
@@ -43,7 +50,7 @@ const LoadingScreen = ({ onComplete }) => {
     <div className={`loading-screen ${!isVisible ? 'exit' : ''}`}>
       <div className="loading-content">
         <div className={`greeting-text ${isFading ? 'fade-out' : 'fade-in'}`}>
-          {currentTextIndex < greetings.length && greetings[currentTextIndex]}
+          {currentTextIndex < greetings.length && greetings[currentTextIndex].text}
         </div>
 
       </div>

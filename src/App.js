@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import './styles/animations.css';
 import { ThemeProvider, useTheme } from './ThemeContext';
 import ThemeToggle from './components/ThemeToggle';
 import LoadingScreen from './components/LoadingScreen';

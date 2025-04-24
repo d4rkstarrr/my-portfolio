@@ -7,7 +7,7 @@
 
 .education-timeline {
   position: relative;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 40px auto;
 }
 
@@ -89,4 +89,42 @@
 
 .education-description {
   line-height: 1.5;
+}
+
+.education-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+
+
+.education-info-section {
+  flex: 1;
+}
+
+.education-logo-container {
+  margin-left: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 80px;
+}
+
+.institution-logo {
+  max-width: 80px;
+  max-height: 50px;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .education-item:nth-child(even) .education-header {
+    flex-direction: row-reverse;
+  }
+  
+  .education-item:nth-child(even) .education-logo-container {
+    margin-left: 0;
+    margin-right: 15px;
+  }
 }
