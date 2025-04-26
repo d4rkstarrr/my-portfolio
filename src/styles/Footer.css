@@ -1,16 +1,22 @@
 /* Footer Component Styles */
 .footer {
-  margin-top: 60px;
-  padding: 20px;
+  padding: 20px 0;
+  width: 100%;
   background: var(--bg-primary);
-  border-top: 4px solid var(--border-color);
+  border-top: 2px solid var(--border-color);
   text-align: center;
+}
+
+.footer > * {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 25px;
+  /* gap: 25px; */
   margin-bottom: 20px;
 }
 
@@ -29,7 +35,7 @@
 }
 
 .social-links a:hover {
-  background: var(--accent-color);
+  /* background: var(--accent-color); */
   color: white;
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);

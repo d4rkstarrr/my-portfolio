@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/LoadingScreen.css';
 
+const greetings = [
+  { text: '👋Hello', timeout: 500 },
+  { text: '👋ನಮಸ್ಕಾರ', timeout: 250 },
+  { text: '👋नमस्ते', timeout: 250 },
+];
+
 const LoadingScreen = ({ onComplete }) => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const [isFading, setIsFading] = useState(false);
-  const greetings = [
-    { text: '👋Hello', timeout: 500 },
-    { text: '👋ನಮಸ್ಕಾರ', timeout: 100 },
-    { text: '👋नमस्ते', timeout: 100 },
-    { text: '👋こんにちは', timeout: 100 },
-    { text: '👋Hallo', timeout: 100 }
-  ];
 
   useEffect(() => {
     // Text transition logic
@@ -42,7 +41,7 @@ const LoadingScreen = ({ onComplete }) => {
 
       return () => clearTimeout(textTimer);
     }
-  }, [currentTextIndex, greetings.length, onComplete]);
+  }, [currentTextIndex, onComplete]);
 
   if (!isVisible) return null;
 

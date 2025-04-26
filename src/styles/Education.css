@@ -1,14 +1,29 @@
 /* Education Component Styles */
 .education {
   padding: 60px 0;
-  max-width: 1000px;
+  width: 100%;
+  max-width: 100vw;
+  border-top: 2px solid var(--border-color);
+  /* background: var(--bg-primary); */
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.education > * {
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
 }
 
 .education-timeline {
   position: relative;
-  max-width: 1000px;
+  max-width: 100%;
+  width: 100%;
   margin: 40px auto;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .education-timeline::before {
@@ -33,42 +48,29 @@
   margin-bottom: 50px;
   padding-left: 50px;
   text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
-.education-item::before {
-  content: '';
-  position: absolute;
-  left: 12px;
-  top: 0;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--accent-color);
-  border: 2px solid var(--bg-primary);
-}
+/* Removed the purple dot */
 
 @media (min-width: 768px) {
   .education-item {
     width: 45%;
     margin-left: auto;
     padding-left: 0;
+    max-width: 45%;
   }
 
   .education-item:nth-child(even) {
     margin-left: 0;
     margin-right: auto;
     text-align: right;
+    max-width: 45%;
   }
 
-  .education-item::before {
-    left: auto;
-    right: -58px;
-  }
-
-  .education-item:nth-child(even)::before {
-    right: auto;
-    left: -58px;
-  }
+  /* Removed the purple dot positioning */
 }
 
 .education-item h3 {
@@ -98,14 +100,11 @@
   margin-bottom: 15px;
 }
 
-
-
 .education-info-section {
   flex: 1;
 }
 
 .education-logo-container {
-  margin-left: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,12 +118,55 @@
 }
 
 @media (min-width: 768px) {
+  /* For odd items (right side of timeline) */
+  .education-item {
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+  
+  .education-item .education-header {
+    flex-direction: row-reverse; /* Logo on left (near timeline), text on right */
+  }
+  
+  .education-item .education-logo-container {
+    position: relative;
+  }
+  
+  /* For even items (left side of timeline) */
   .education-item:nth-child(even) .education-header {
-    flex-direction: row-reverse;
+    flex-direction: row; /* Logo on right (near timeline), text on left */
   }
   
   .education-item:nth-child(even) .education-logo-container {
-    margin-left: 0;
-    margin-right: 15px;
+    position: relative;
+  }
+  
+  .education-item:nth-child(even) {
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 767px) {
+  .education-item {
+    padding-left: 30px;
+    padding-right: 10px;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+  }
+  
+  .education-logo-container {
+    max-width: 60px;
+    min-width: 60px;
+  }
+  
+  .institution-logo {
+    max-width: 60px;
+  }
+  
+  .education-header {
+    flex-wrap: wrap;
   }
 }

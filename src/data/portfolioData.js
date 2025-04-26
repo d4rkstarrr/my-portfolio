@@ -46,25 +46,35 @@ export const educationData = [
 ];
 
 export const skillsData = {
+  backend: [
+    "Java",
+    "Spring Boot",
+    "Oracle SQL",
+    "Maven"
+  ],
   frontend: [
-    "React",
-    "JavaScript",
+    "React.js",
+    "Javascript",
     "HTML/CSS",
-    "TypeScript",
     "Redux"
   ],
-  backend: [
-    "Node.js",
-    "Python",
-    "SQL",
-    "Express",
-    "MongoDB"
-  ],
-  tools: [
+  devops: [
     "Git",
-    "Docker",
-    "AWS",
-    "CI/CD",
-    "Agile Methodologies"
+    "Jira",
+    "Jenkins",
+    "Sonar",
+  ]
+};
+
+// Descriptions for each skill category
+export const skillDescriptions = {
+  backend: [
+    "I love problem-solving and building complex systems. I strive to create scalable, reliable, and secure solutions."
+  ],
+  frontend: [
+    "I'm passionate about design, animation, and interactions, always aiming to build fun websites with great user experiences."
+  ],
+  devops: [
+    "I use these tools to streamline development workflows, track issues, and ensure code quality."
   ]
 };

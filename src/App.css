@@ -18,8 +18,8 @@
   --accent-color: #9d4edd;
   --card-bg: rgba(25, 25, 25, 0.7);
   --card-shadow: rgba(0, 0, 0, 0.3);
-  --gradient-start: rgba(18, 18, 18, 0.7);
-  --gradient-end: rgba(25, 25, 25, 0.5);
+  --gradient-start: #924eca;
+  --gradient-end: #f0f0f0;
   --border-color: #f0f0f0;
 }
 
@@ -31,8 +31,8 @@
   --accent-color: #3f3c42;
   --card-bg: #ffffff;
   --card-shadow: rgba(0, 0, 0, 0.1);
-  --gradient-start: #f8f9fa;
-  --gradient-end: #e9ecef;
+  --gradient-start: #1d26d8;
+  --gradient-end: #dfdee4;
   --border-color: #212529;
 }
 
@@ -91,6 +91,10 @@ body {
 
 .App {
   text-align: center;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 /* Hero Section */
@@ -117,90 +121,6 @@ body {
   font-size: 1.5rem;
   opacity: 0.9;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-}
-
-/* Experience Section */
-.experience {
-  padding: 60px 0;
-}
-
-.timeline {
-  position: relative;
-  max-width: 800px;
-  margin: 40px auto;
-}
-
-.timeline-item {
-  background: var(--card-bg);
-  border-radius: 8px;
-  padding: 20px;
-  margin: 20px 0;
-  box-shadow: 0 4px 6px var(--card-shadow);
-  transition: transform 0.3s ease;
-  color: var(--text-primary);
-}
-
-.timeline-item:hover {
-  transform: translateY(-5px);
-}
-
-/* Skills Section */
-.skills {
-  padding: 60px 0;
-  background: var(--bg-secondary);
-  border-radius: 10px;
-}
-
-.skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  padding: 20px;
-}
-
-.skill-category {
-  background: var(--card-bg);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px var(--card-shadow);
-  color: var(--text-primary);
-}
-
-.skill-category ul {
-  list-style: none;
-  padding: 0;
-}
-
-.skill-category li {
-  padding: 10px 0;
-  border-bottom: 1px solid var(--text-secondary);
-  color: var(--text-primary);
-}
-
-/* Testimonials Section */
-.testimonials {
-  padding: 60px 0;
-}
-
-.testimonials-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  padding: 20px;
-}
-
-.testimonial {
-  background: var(--card-bg);
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px var(--card-shadow);
-  color: var(--text-primary);
-}
-
-.testimonial p:first-child {
-  font-style: italic;
-  font-size: 1.1rem;
-  margin-bottom: 20px;
 }
 
 /* Responsive Design */
