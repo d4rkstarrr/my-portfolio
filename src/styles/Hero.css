@@ -8,7 +8,7 @@
   background: transparent;
   color: var(--text-primary);
   margin: 0;
-  padding: 40px 0;
+  padding: 160px 0;
   position: relative;
   width: 100%;
   max-width: 100vw;
@@ -44,12 +44,18 @@
     flex-direction: row;
     text-align: center;
     justify-content: center;
-    gap: 4rem;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
   }
 }
 
 .hero-image {
   flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile-image-placeholder {
@@ -152,5 +158,9 @@
   
   .hero-social-links {
     justify-content: center;
+  }
+  
+  .hero-content {
+    justify-content: space-around;
   }
 }
