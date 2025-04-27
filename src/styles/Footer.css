@@ -24,21 +24,59 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background: var(--bg-primary);
+  width: 50px;
+  height: 50px;
   color: var(--text-primary);
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   transition: all 0.3s ease;
   text-decoration: none;
 }
 
 .social-links a:hover {
-  /* background: var(--accent-color); */
-  color: white;
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Brand-specific hover colors */
+.social-links a[href*="linkedin"]:hover {
+  color: #0077b5; /* LinkedIn blue */
+}
+
+.social-links a[href*="github"]:hover {
+  color: #6e5494; /* GitHub purple */
+}
+
+.social-links a[href*="twitter"]:hover,
+.social-links a[href*="x.com"]:hover {
+  color: #1DA1F2; /* Twitter blue */
+}
+
+.social-links a[href*="instagram"]:hover {
+  color: #E1306C; /* Instagram pink */
+}
+
+.social-links a[href*="facebook"]:hover {
+  color: #4267B2; /* Facebook blue */
+}
+
+.social-links a[href*="youtube"]:hover {
+  color: #FF0000; /* YouTube red */
+}
+
+.social-links a[href*="medium"]:hover {
+  color: #00ab6c; /* Medium green */
+}
+
+.social-links a[href*="dev.to"]:hover {
+  color: #0a0a0a; /* Dev.to black */
+}
+
+.social-links a[href*="mailto"]:hover {
+  color: #FFD700; /* Gold/Yellow for email */
+}
+
+.social-links a[href*="resume"]:hover,
+.social-links a[href*="cv"]:hover {
+  color: #008080; /* Teal for resume/CV */
 }
 
 .footer-text {

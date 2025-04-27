@@ -18,7 +18,7 @@ function Footer() {
           <i className="fas fa-file-alt"></i>
         </a>
       </div>
-      <p className="footer-text">Crafted with ❤️‍🔥 by Yashas Chandra</p>
+      <b className="footer-text">Crafted with ❤️‍🔥 by Yashas Chandra</b>
     </footer>
   );
 }
